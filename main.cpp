@@ -27,6 +27,15 @@ void initialize() {
 	pros::lcd::set_text(1, "Hello PROS User!");
 
 	pros::lcd::register_btn1_cb(on_center_button);
+	left1.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	left2.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	left3.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	left4.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	right1.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	right2.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	right3.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	right4.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+
 }
 
 /**
@@ -78,5 +87,6 @@ void opcontrol() {
 	{
 		doDaDrive();
 		activateWings();
+		pros::delay(20);
 	}
 }
