@@ -60,9 +60,4 @@ void doDaDrive()
     {
         driveRight(0);
     }
-
-    
-    
-
-
 }
