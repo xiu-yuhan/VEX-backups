@@ -39,7 +39,7 @@ void doDaDrive()
 
 
     //flicker setup
-    //tolerance is to counter joystick recoil from flicking
+    //tolerance is to counter joystick recoil from flicking, it is also for joystick drift
     int tolerance = 20;
     if(con.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y) > tolerance | con.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y) < (tolerance * -1))
     {
